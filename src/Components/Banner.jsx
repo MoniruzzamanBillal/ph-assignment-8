@@ -2,7 +2,7 @@ import React from "react";
 
 const Banner = () => {
   return (
-    <div className="bannerCOntainer">
+    <div className="bannerCOntainer mb-8 ">
       <div className="bannerWrapper">
         {/*  */}
         {/* overlay banner  */}
