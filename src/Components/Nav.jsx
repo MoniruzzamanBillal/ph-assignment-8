@@ -15,7 +15,7 @@ const navLinks = [
     element: "Donation",
   },
   {
-    href: "/",
+    href: "/statistics",
     element: "Statistics",
   },
 ];

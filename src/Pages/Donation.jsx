@@ -13,7 +13,7 @@ const Donation = () => {
   const previousDonateId = getDonatedId();
 
   const handleSeeMore = () => {
-    console.log(toggle);
+    // console.log(toggle);
     setSize(donatedData.length);
     setToggle(true);
   };
@@ -28,7 +28,7 @@ const Donation = () => {
 
   return (
     <div className="donationContainer   mt-4 mb-6">
-      <div className="donationWrapper  m-auto w-[95%] sm:w-[90%] grid grid-cols-2 gap-x-2 gap-y-3 ">
+      <div className="donationWrapper  m-auto w-[95%] sm:w-[90%] grid grid-cols-1 lg:grid-cols-2 gap-x-2 gap-y-3 ">
         {/* donation card container  */}
 
         {donatedData.slice(0, size).map((ele, ind) => (
