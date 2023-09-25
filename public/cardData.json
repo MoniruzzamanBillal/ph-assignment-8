@@ -1,5 +1,6 @@
 [
   {
+    "money": 200,
     "id": 1,
     "Category": "Health",
     "Title": "Donate for Clean Water",
@@ -13,6 +14,7 @@
   },
 
   {
+    "money": 320,
     "id": 2,
     "Category": "Food",
     "Title": "Emergency Food Relief",
@@ -24,6 +26,7 @@
     "Description": "Your donation provides essential food supplies to families facing hunger, ensuring that no one goes to bed hungry."
   },
   {
+    "money": 220,
     "id": 3,
     "Category": "Clothing",
     "Title": "Warm Clothing Drive",
@@ -35,6 +38,7 @@
     "Description": "Donate warm clothing to help those in need stay warm during the cold winter months, making a difference in their lives."
   },
   {
+    "money": 300,
     "id": 4,
     "Category": "Education",
     "Title": "Scholarships for Underprivileged Students",
@@ -46,6 +50,7 @@
     "Description": "Your donation supports scholarships for underprivileged students, providing them with access to quality education and a brighter future."
   },
   {
+    "money": 190,
     "id": 5,
     "Category": "Health",
     "Title": "Donate for Medical Supplies",
@@ -59,6 +64,7 @@
   },
 
   {
+    "money": 170,
     "id": 6,
     "Category": "Food",
     "Title": "Food Education for Communities",
@@ -70,6 +76,7 @@
     "Description": "Contribute to food education initiatives that teach communities about nutrition, cooking, and healthy eating for a better future."
   },
   {
+    "money": 120,
     "id": 7,
     "Category": "Clothing",
     "Title": "Professional Attire for Job Seekers",
@@ -82,6 +89,7 @@
   },
 
   {
+    "money": 240,
     "id": 8,
     "Category": "Education",
     "Title": "Educational Supplies for Schools",
@@ -93,6 +101,7 @@
     "Description": "Contribute to our initiative by providing educational supplies to schools in need, helping children learn and grow."
   },
   {
+    "money": 110,
     "id": 9,
     "Category": "Health",
     "Title": "Donate for Mental Health Awareness",
@@ -106,6 +115,7 @@
   },
 
   {
+    "money": 400,
     "id": 10,
     "Category": "Food",
     "Title": "Meal Programs for the Homeless",
@@ -117,6 +127,7 @@
     "Description": "Support our meal programs for the homeless by providing hot, nutritious meals and a sense of hope to those in need."
   },
   {
+    "money": 250,
     "id": 11,
     "Category": "Clothing",
     "Title": "School Uniforms for Children",
@@ -128,6 +139,7 @@
     "Description": "Your donation of school uniforms ensures that children have the necessary clothing to attend school, promoting education and a brighter future."
   },
   {
+    "money": 100,
     "id": 12,
     "Category": "Education",
     "Title": "Teacher Training Programs",

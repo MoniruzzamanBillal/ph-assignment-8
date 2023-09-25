@@ -11,7 +11,7 @@ const navLinks = [
     element: "Home",
   },
   {
-    href: "/details",
+    href: "/donation",
     element: "Donation",
   },
   {
@@ -61,7 +61,7 @@ const Nav = () => {
                   to={ele.href}
                   className={`  ${
                     navLinks.length - 1 === ind ? "mr-0" : "mr-8"
-                  } text-lg text-color hover:text-blue-700  `}
+                  } text-lg text-color hover:text-blue-700`}
                 >
                   {ele.element}
                 </NavLink>

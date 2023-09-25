@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* shared css  */
+.active {
+  color: red;
+  text-decoration: underline;
+}
