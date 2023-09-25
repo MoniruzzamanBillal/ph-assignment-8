@@ -38,7 +38,7 @@ const Nav = () => {
           <div className="navLogo  w-[70%] ">
             <Link to={"/"}>
               <img
-                src="../../public/Logo.png"
+                src="https://i.ibb.co/BjXV02N/Logo.png"
                 alt=""
                 className=" w-full h-full "
               />

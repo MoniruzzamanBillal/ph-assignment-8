@@ -2,22 +2,42 @@ import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { getDonatedId, saveDonateId } from "../utility/LocalStorage";
 
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 const Details = () => {
   const [userData, setUserData] = useState([]);
   const responseData = useLoaderData();
   const response = useParams();
   const dataId = parseInt(response.id);
 
-  // console.log(dataId);
+  const addedSuccessFully = () =>
+    toast.success("Donated successfully!", {
+      position: "top-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
 
-  //   console.log(responseData);
+  const alreadyAdded = () =>
+    toast.warn("Already Donated!!", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "colored",
+    });
 
   useEffect(() => {
     const filterData = () => {
-      //   console.log(responseData);
       const desiredData = responseData.find((ele) => ele.id === dataId);
-
-      //   console.log(desiredData);
 
       const newArray = [desiredData];
 
@@ -33,8 +53,10 @@ const Details = () => {
     const isExist = previousIds.find((id) => id === selectedId);
 
     if (isExist) {
-      return alert("Item already exist");
+      return alreadyAdded();
     }
+
+    addedSuccessFully();
 
     saveDonateId(selectedId);
   };
@@ -64,6 +86,8 @@ const Details = () => {
                   >
                     Donate ${ele.money}
                   </button>
+
+                  <ToastContainer />
                 </div>
               </div>
 
