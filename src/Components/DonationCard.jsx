@@ -21,7 +21,7 @@ const DonationCard = ({ ele }) => {
           style={{ backgroundColor: CardBg }}
         >
           <img
-            class="object-cover h-[8rem] sm:h-[10rem] md:h-[11rem] rounded-t-lg w-48 md:rounded-none md:rounded-l-lg"
+            class="object-cover h-[8rem] sm:h-[10rem] md:h-[11rem] rounded-t-lg w-36 sm:w-48 md:rounded-none md:rounded-l-lg"
             src={Picture}
             alt=""
           />
