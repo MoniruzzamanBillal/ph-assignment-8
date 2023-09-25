@@ -1,8 +1,13 @@
 import { useLoaderData } from "react-router-dom";
 import Banner from "../Components/Banner";
 import CardComponent from "../Components/CardComponent";
+import { GlobalContext } from "../utility/Context";
 
 const Home = () => {
+  const { datas, setDatas, searchData, setSearchData } = GlobalContext();
+
+  console.log(searchData);
+
   return (
     <div className="homeContainer">
       <div className="homeWrapper">
@@ -12,7 +17,7 @@ const Home = () => {
 
         {/* card component  */}
         <div className="cardComponent">
-          <CardComponent />
+          <CardComponent datas={searchData} />
         </div>
         {/* card component  */}
       </div>

@@ -1,19 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Card from "./Card";
+import { GlobalContext } from "../utility/Context";
 
-const CardComponent = () => {
-  const [datas, setDatas] = useState([]);
+const CardComponent = ({ datas }) => {
+  // const { datas, setDatas } = GlobalContext();
 
-  useEffect(() => {
-    const getData = async () => {
-      const response = await fetch("cardData.json");
-      const responseData = await response.json();
-
-      setDatas(responseData);
-    };
-
-    getData();
-  }, []);
+  // console.log(datas);
 
   return (
     <div className="cardContainer  mb-4 ">

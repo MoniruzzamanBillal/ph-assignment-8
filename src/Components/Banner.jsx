@@ -1,6 +1,37 @@
-import React from "react";
+import { data } from "autoprefixer";
+import React, { useState } from "react";
+import { GlobalContext } from "../utility/Context";
 
 const Banner = () => {
+  const { datas, setDatas, searchData, setSearchData } = GlobalContext();
+  // console.log(datas);
+  const [searchValue, setSearchValue] = useState("");
+
+  const handleSearch = () => {
+    if (!searchValue) {
+      return alert("Enter user input");
+    }
+
+    const newData = datas.filter((ele) => {
+      const dataElement = ele.Category.toUpperCase();
+      const searchedData = searchValue.toUpperCase();
+
+      return dataElement === searchedData;
+    });
+
+    // console.log(newData);
+
+    if (newData.length === 0) {
+      alert("There is no such category ");
+      setSearchValue("");
+      return;
+    }
+
+    setSearchData(newData);
+
+    setSearchValue("");
+  };
+
   return (
     <div className="bannerCOntainer mb-8 ">
       <div className="bannerWrapper">
@@ -24,9 +55,15 @@ const Banner = () => {
               <input
                 type="text"
                 placeholder="Search Here..."
-                className=" border-none outline-none w-[71%] text-sm sm:text-base  "
+                value={searchValue}
+                onChange={(e) => setSearchValue(e.target.value)}
+                className=" border-none outline-none w-[71%] text-sm sm:text-base   "
+                required
               />
-              <button className=" w-[29%] bg-red-600 py-1 sm:py-2 px-2 sm:px-3 md:px-5 font-semibold text-white rounded-r text-sm sm:text-base ">
+              <button
+                className=" w-[29%] bg-red-600 py-1 sm:py-2 px-2 sm:px-3 md:px-5 font-semibold text-white rounded-r text-sm sm:text-base "
+                onClick={() => handleSearch()}
+              >
                 Search
               </button>
             </div>
