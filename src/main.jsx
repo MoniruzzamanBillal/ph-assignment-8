@@ -6,6 +6,7 @@ import "./index.css";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
 import Root from "./Components/Root";
+import Details from "./Pages/Details";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,11 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home />,
+        loader: () => fetch("cardData.json"),
+      },
+      {
+        path: "/details",
+        element: <Details />,
         loader: () => fetch("cardData.json"),
       },
     ],
