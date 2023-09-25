@@ -60,6 +60,7 @@ const Details = () => {
                   <button
                     className=" bg-red-500 py-1.5 sm:py-2 px-3 sm:px-5 font-semibold rounded text-sm sm:text-base active:scale-95 "
                     onClick={() => handleDonate(ele.id)}
+                    style={{ backgroundColor: ele.TextColor }}
                   >
                     Donate ${ele.money}
                   </button>

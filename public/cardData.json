@@ -20,9 +20,9 @@
     "Title": "Emergency Food Relief",
     "Picture": "https://i.ibb.co/T17gPw0/Food.png",
     "CategoryBg": "#F87147",
-    "CardBg": "#F8714726",
-    "TextColor": "#F87147",
-    "ButtonBg": "#F8714726",
+    "CardBg": "#E5CFF7",
+    "TextColor": "#5B0888",
+    "ButtonBg": "#9D76C1",
     "Description": "Your donation provides essential food supplies to families facing hunger, ensuring that no one goes to bed hungry."
   },
   {
@@ -70,9 +70,9 @@
     "Title": "Food Education for Communities",
     "Picture": "https://i.ibb.co/T17gPw0/Food.png",
     "CategoryBg": "#F87147",
-    "CardBg": "#F8714726",
-    "TextColor": "#F87147",
-    "ButtonBg": "#F8714726",
+    "CardBg": "#E5CFF7",
+    "TextColor": "#5B0888",
+    "ButtonBg": "#9D76C1",
     "Description": "Contribute to food education initiatives that teach communities about nutrition, cooking, and healthy eating for a better future."
   },
   {
@@ -121,9 +121,9 @@
     "Title": "Meal Programs for the Homeless",
     "Picture": "https://i.ibb.co/T17gPw0/Food.png",
     "CategoryBg": "#F87147",
-    "CardBg": "#F8714726",
-    "TextColor": "#F87147",
-    "ButtonBg": "#F8714726",
+    "CardBg": "#E5CFF7",
+    "TextColor": "#5B0888",
+    "ButtonBg": "#9D76C1",
     "Description": "Support our meal programs for the homeless by providing hot, nutritious meals and a sense of hope to those in need."
   },
   {
