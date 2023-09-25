@@ -107,8 +107,3 @@ const Nav = () => {
 };
 
 export default Nav;
-
-// clothing - https://ibb.co/5W222wf
-// education - https://ibb.co/sJBgxKz
-// foood - https://ibb.co/kSh5QRp
-// health - https://ibb.co/XZKgLCQ

@@ -1,33 +1,53 @@
 import React from "react";
 
-const Card = () => {
+const Card = ({ ele }) => {
+  // console.log(ele);
+
+  const {
+    id,
+    ButtonBg,
+    CardBg,
+    Category,
+    TitleText,
+    Picture,
+    TextColor,
+    Title,
+  } = ele;
+
+  // console.log(id);
+
   return (
-    <div className="cardData  ">
+    <div className="cardData cursor-pointer hover:shadow-lg transform duration-300 hover:-translate-y-2">
       {/* card  */}
 
-      <div class="max-w-sm bg-blue-200 border border-gray-200 rounded-lg shadow  ">
+      <div
+        class={`max-w-sm   border border-gray-200 rounded-lg shadow`}
+        style={{ backgroundColor: CardBg }}
+      >
         {/* card img  */}
-        <div className="cardImg">
-          <img
-            class="rounded-t-lg"
-            src="../../public/images/Health.png"
-            alt=""
-            className=" w-full "
-          />
+        <div className="cardImg w-full ">
+          <img className="rounded-t-lg" src={Picture} alt="" />
         </div>
 
         {/* card img  */}
 
-        <div class="p-3">
+        <div className="p-3">
           {/* card category  */}
-          <div className="cardCategory mb-3 bg-blue-300 inline-block py-1 px-3 rounded-md text-blue-800 font-semibold ">
-            <h1 className="  ">Health</h1>
+
+          <div
+            className={`cardCategory mb-3    inline-block py-1 px-3 rounded-md text-blue-800  font-semibold`}
+            style={{ backgroundColor: ButtonBg, color: TextColor }}
+          >
+            <h1 className="  "> {Category} </h1>
           </div>
           {/* card category  */}
 
           {/* card title  */}
-          <div className="cardTitle text-blue-600 font-bold text-xl  ">
-            <h1>Clean water for children </h1>
+          <div
+            className={`cardTitle  h-[4rem] flex items-center justify-start text-[${TitleText}] font-bold text-lg `}
+            style={{ color: TextColor }}
+          >
+            <h1> {Title} </h1>
           </div>
           {/* card title  */}
         </div>
