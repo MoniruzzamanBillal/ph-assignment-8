@@ -21,7 +21,7 @@ const Card = ({ ele }) => {
       {/* card  */}
 
       <div
-        class={`max-w-sm   border border-gray-200 rounded-lg shadow`}
+        class={`max-w-[19rem]   border border-gray-200 rounded-lg shadow`}
         style={{ backgroundColor: CardBg }}
       >
         {/* card img  */}
