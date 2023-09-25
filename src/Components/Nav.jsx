@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 import { RiMenu3Line } from "react-icons/ri";
 import { GrClose } from "react-icons/gr";
@@ -11,7 +11,7 @@ const navLinks = [
     element: "Home",
   },
   {
-    href: "/",
+    href: "/details",
     element: "Donation",
   },
   {
@@ -28,7 +28,7 @@ const Nav = () => {
   };
 
   return (
-    <div className="navContainer bg-gray-100 shadow  py-1   ">
+    <div className="navContainer bg-gray-100 shadow  py-1    ">
       <div className="navWrapper w-[95%] sm:w-[90%] m-auto flex justify-between items-center ">
         {/*  */}
 
@@ -36,11 +36,13 @@ const Nav = () => {
         <div className="navLeft  ">
           {/* lav logo  */}
           <div className="navLogo  w-[70%] ">
-            <img
-              src="../../public/Logo.png"
-              alt=""
-              className=" w-full h-full "
-            />
+            <Link to={"/"}>
+              <img
+                src="../../public/Logo.png"
+                alt=""
+                className=" w-full h-full "
+              />
+            </Link>
           </div>
           {/* lav logo  */}
         </div>
@@ -81,12 +83,14 @@ const Nav = () => {
             <div
               className={` mobileMenu ${
                 toggle ? "block" : "hidden"
-              } w-[8rem] m-auto   absolute transform -translate-x-1/2 -translate-y-1/2 top-[5.7rem] -right-[4rem] `}
+              } w-[8rem] m-auto   absolute transform -translate-x-1/2 -translate-y-1/2 top-[5.7rem] -right-[4rem] z-20 `}
             >
               <div className="navLinks flex flex-col bg-gray-200 px-4 py-3 shadow-sm rounded-md ">
                 {navLinks.map((ele, ind) => (
                   <NavLink
                     key={ind}
+                    to={ele.href}
+                    onClick={() => toggleMenu()}
                     className={`  ${
                       navLinks.length - 1 === ind ? "mb-0" : "mb-3"
                     } hover:text-blue-700 `}

@@ -1,38 +1,74 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLoaderData, useParams } from "react-router-dom";
 
 const Details = () => {
+  const [userData, setUserData] = useState([]);
+
+  const responseData = useLoaderData();
+  const response = useParams();
+
+  const dataId = parseInt(response.id);
+
+  //   console.log(dataId);
+  //   console.log(typeof dataId);
+
+  //   console.log(responseData);
+
+  useEffect(() => {
+    const filterData = () => {
+      //   console.log(responseData);
+      const desiredData = responseData.find((ele) => ele.id === dataId);
+
+      //   console.log(desiredData);
+
+      const newArray = [desiredData];
+
+      setUserData(newArray);
+    };
+
+    filterData();
+  }, []);
+
+  useEffect(() => {
+    console.log(userData);
+    // console.log(userData.size);
+  }, [userData]);
+
   return (
     <div className="detailsContainer  my-3  ">
       <div className="detailsWrapper  m-auto w-[95%] md:w-[90%] ">
         {/*  */}
 
-        <div className="body">
-          <div className="imgContainer h-[16rem] sm:h-[21rem] md:h-[25rem] lg:h-[30rem]  ">
-            <img
-              className="rounded-t-lg w-full h-full bg-cover "
-              src="../../public/images/Rectangle 4288.png"
-              alt=""
-            />
-          </div>
+        {userData &&
+          userData.map((ele, ind) => (
+            <div className="body  " key={ind}>
+              <div className="imgContainer  bg-amber-400 h-[16rem] sm:h-[21rem] md:h-[25rem] lg:h-[30rem] relative ">
+                <img
+                  className="rounded-t-lg w-full h-full bg-cover "
+                  src={ele.Picture}
+                  alt=""
+                />
+                {/*  */}
+                <div className="absolute top-[12rem] sm:top-[17rem] md:top-[21rem] lg:top-[26rem] left-[0rem] inset-0 bg-gray-800 opacity-60  h-[4rem] "></div>
+                {/*  */}
+                <div className="buttonContainer w-full inset-0 py-2 absolute top-[12rem] sm:top-[17rem] md:top-[21rem] lg:top-[26rem] left-[0rem] text-white h-[4rem] flex items-center  p-3 sm:p-6  ">
+                  <button className=" bg-red-500 py-1.5 sm:py-2 px-3 sm:px-5 font-semibold rounded text-sm sm:text-base ">
+                    Donate $200
+                  </button>
+                </div>
+              </div>
 
-          <div className="pt-2">
-            <h5 className="mb-2 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 ">
-              Good Education
-            </h5>
+              <div className="pt-2">
+                <h5 className="mb-2 text-xl sm:text-2xl font-bold tracking-tight text-gray-900 ">
+                  {ele.Title}
+                </h5>
 
-            <p className="mb-3 font-normal text-sm sm:text-base text-gray-700 dark:text-gray-400">
-              There are many things that can be done to ensure that all people
-              have access to a good education. Governments can invest in public
-              schools, provide financial assistance to students, and make sure
-              that all schools have qualified teachers and resources. Families
-              can support their children's education by creating a learning
-              environment at home and helping them with their schoolwork.
-              Teachers can create a positive and supportive learning environment
-              for their students and challenge them to reach their full
-              potential.
-            </p>
-          </div>
-        </div>
+                <p className="mb-3 font-normal text-sm sm:text-base text-gray-700 dark:text-gray-400">
+                  {ele.Description}
+                </p>
+              </div>
+            </div>
+          ))}
 
         {/*  */}
       </div>
